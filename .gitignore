@@ -1,11 +1,8 @@
-# Python bytecode
-__pycache__/
-*.pyc
+# .NET build artifacts
+bin/
+obj/
 
-# Environment variables
-.env
-.env.local
-*.env.*
-
-# Scratch/Temp files
-.scratch/
+# IDE files
+.vs/
+*.user
+*.suo
