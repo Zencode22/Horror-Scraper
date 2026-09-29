@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>ItchScraper</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- PARSE & EXTRACT layer: HTML DOM + CSS selectors (README: BeautifulSoup equivalent) -->
+    <PackageReference Include="AngleSharp" Version="1.1.2" />
+    <!-- OUTPUT layer: xlsx workbook writing (README: openpyxl equivalent) -->
+    <PackageReference Include="ClosedXML" Version="0.104.2" />
+  </ItemGroup>
+
+</Project>
