@@ -1,0 +1,1 @@
+{"url":"https://itch.io/robots.txt","status":200,"saved_at":1790706707.477,"text":"User-agent: *\nDisallow: /embed/\nDisallow: /embed-upload/\nDisallow: /search\nDisallow: /checkout/\nDisallow: /game/download/\nDisallow: /bundle/download/\nDisallow: /register-for-purchase/\nDisallow: /email-feedback/\n\nSitemap: https://itch.io/sitemap.xml\n"}

@@ -1,0 +1,19 @@
+2026-09-29 13:31:45 | INFO    | itch_scraper | starting itch.io scrape | pages<= 3 | details=True
+2026-09-29 13:31:47 | INFO    | itch_scraper | robots.txt loaded (8 disallow rule(s): /embed/, /embed-upload/, /search, /checkout/, /game/download/, /bundle/download/, /register-for-purchase/, /email-feedback/)
+2026-09-29 13:31:50 | INFO    | itch_scraper | page 1 of https://itch.io/games/tag-horror -> 36 games
+2026-09-29 13:31:52 | INFO    | itch_scraper | page 2 of https://itch.io/?page=2 -> 61 games
+2026-09-29 13:31:53 | INFO    | itch_scraper | page 1 of https://itch.io/games/newest/tag-horror -> 36 games
+2026-09-29 13:31:53 | INFO    | itch_scraper | cache hit  https://itch.io/?page=2 (2 s old)
+2026-09-29 13:31:54 | INFO    | itch_scraper | page 2 of https://itch.io/?page=2 -> 61 games
+2026-09-29 13:31:54 | INFO    | itch_scraper | collected 194 listing rows from 2 source(s)
+2026-09-29 13:31:54 | INFO    | itch_scraper | detail requests capped at 120 of 133 unique games
+2026-09-29 13:32:28 | INFO    | itch_scraper | details: 20/120 fetched
+2026-09-29 13:33:02 | INFO    | itch_scraper | details: 40/120 fetched
+2026-09-29 13:33:36 | INFO    | itch_scraper | details: 60/120 fetched
+2026-09-29 13:34:16 | INFO    | itch_scraper | details: 80/120 fetched
+2026-09-29 13:34:48 | INFO    | itch_scraper | details: 100/120 fetched
+2026-09-29 13:35:27 | INFO    | itch_scraper | details: 120/120 fetched
+2026-09-29 13:35:27 | INFO    | itch_scraper | cleaning: 133 raw -> 133 rows (133 unique after dedupe pass), 0/133 carry a release date
+2026-09-29 13:35:30 | INFO    | itch_scraper | wrote Combined=133 rows, Steam=0 rows, Itch=133 rows -> C:\Users\conno\Documents\GitHub\Codes\Horror-Scraper\src\ItchScraper\output\workbook.xlsx
+2026-09-29 13:35:30 | INFO    | itch_scraper | run summary: {"duration_seconds":225.09,"requests":125,"cache_hits":1,"retries":0,"listings_parsed":194,"details_parsed":120,"failures":0,"failed_requests_log":"C:\\Users\\conno\\Documents\\GitHub\\Codes\\Horror-Scraper\\src\\ItchScraper\\logs\\failed_requests.jsonl","cache":{"dir":"C:\\Users\\conno\\Documents\\GitHub\\Codes\\Horror-Scraper\\src\\ItchScraper\\cache\\itch","entries":124,"hits":1,"misses":124,"enabled":true}}
+2026-09-29 13:35:30 | INFO    | itch_scraper | Run finished in 225.18 s | 125 requests (1 cached, 0 retries) | 194 listing rows, 120 detail pages | 0 failures -> C:\Users\conno\Documents\GitHub\Codes\Horror-Scraper\src\ItchScraper\logs\failed_requests.jsonl
