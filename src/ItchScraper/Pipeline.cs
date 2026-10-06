@@ -58,6 +58,12 @@ public static class Pipeline
     private static async Task<ScrapeResult> RunCoreAsync(
         ItchScraperConfig config, PoliteFetcher fetcher, RunStats stats, bool writeOutput)
     {
+        // Which sources this run crawls (mirrors the flag computed by ScrapeAsync).
+        var sources = new List<string>();
+        if (config.FetchSteam) sources.Add("steam");
+        if (config.FetchItch) sources.Add("itch");
+        if (sources.Count == 0) sources.Add("itch"); // never crawl nothing
+
         var robotsByHost = await LoadRobotsByHostAsync(fetcher, config, stats).ConfigureAwait(false);
 
         GameTable? itchTable = null;

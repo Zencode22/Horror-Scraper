@@ -1,1 +1,9 @@
-(empty)
+# Build artifacts and dependencies
+bin/
+obj/
+
+# Cache directories
+cache/
+
+# Logs
+logs/

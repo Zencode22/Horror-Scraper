@@ -27,7 +27,7 @@ public sealed class RobotsPolicy
     public string? Reason { get; init; }
 
     /// <summary>Site origin this policy was loaded from (for relative-URL checks).</summary>
-    public string Origin { get; init; } = "https://itch.io/";
+    public string Origin { get; set; } = "https://itch.io/";
 
     private RobotsPolicy(string userAgent) => _userAgent = userAgent;
 
@@ -161,7 +161,7 @@ public sealed class RobotsPolicy
         return kept;
     }
 
-    internal static string Absolutize(string url)
+    internal string Absolutize(string url)
     {
         if (url.StartsWith("http", StringComparison.OrdinalIgnoreCase)) return url;
         // Relative links resolve against the site this policy belongs to.
@@ -204,7 +204,9 @@ public static class RobotsFetcher
             policy = RobotsPolicy.FromText(text, fetcher.UserAgent);
             if (Uri.TryCreate(robotsUrl, UriKind.Absolute, out var robotsUri))
             {
-                policy = policy.WithOrigin($"{robotsUri.Scheme}://{robotsUri.Host}/");
+                // Record which site the policy belongs to so relative-URL
+                // checks resolve against the right origin.
+                policy.Origin = $"{robotsUri.Scheme}://{robotsUri.Host}/";
             }
         }
         catch (Exception e)

@@ -166,10 +166,10 @@ public static class ExcelWriter
         // three sheets always reflect the freshest data from both stores.
         var itchClean = itchTable is { Count: > 0 }
             ? PrepareSheetTable(itchTable)
-            : FallbackOrEmpty(workbookPath, sheetItch, ranThisRun: itchTable is not null);
+            : FallbackOrEmpty(workbookPath, sheetItch, ranButEmpty: itchTable is not null);
         var steamClean = steamTable is { Count: > 0 }
             ? PrepareSheetTable(steamTable)
-            : FallbackOrEmpty(workbookPath, sheetSteam, ranThisRun: steamTable is not null);
+            : FallbackOrEmpty(workbookPath, sheetSteam, ranButEmpty: steamTable is not null);
 
         var sheets = new Dictionary<string, GameTable>(StringComparer.Ordinal)
         {

@@ -43,7 +43,7 @@ public static class ItchParser
     /// <returns>A list of raw records; cards without a title/link are skipped.</returns>
     public static List<Record> ParseListingPage(string html, string sourceUrl, int page = 1)
     {
-        var document = ItchFetcher.Parse(html ?? string.Empty);
+        var document = PoliteFetcher.Parse(html ?? string.Empty);
         var records = new List<Record>();
 
         foreach (var cell in document.QuerySelectorAll(".game_cell"))
@@ -185,7 +185,7 @@ public static class ItchParser
     /// developer, rating_count, tags, status, classification, price_raw and price_usd.</returns>
     public static Record ParseGamePage(string html, string url)
     {
-        var document = ItchFetcher.Parse(html ?? string.Empty);
+        var document = PoliteFetcher.Parse(html ?? string.Empty);
         var details = new Record
         {
             ["url"] = url,
