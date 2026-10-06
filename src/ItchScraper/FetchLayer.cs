@@ -1,10 +1,11 @@
-// FETCH LAYER for itch.io: rate limiting, retries and caching in one client.
+// SHARED FETCH LAYER: rate limiting, retries and caching in one polite client.
 //
-// Mirrors the README boxes "Itch Fetcher" + "Rate Limiter (1-2 sec crawl
-// delay)". The design goal is that *every* outbound request goes through
-// ItchFetcher.GetAsync, so politeness can never be forgotten by accident.
+// Mirrors the README boxes "Steam Fetcher" / "Itch Fetcher" + "Rate Limiter
+// (1-2 sec crawl delay)". One PoliteFetcher instance is shared by BOTH source
+// crawlers inside a run, so the politeness gap applies across every outbound
+// request and can never be forgotten by accident.
 //
-//   var fetcher = new ItchFetcher(config, stats);
+//   var fetcher = new PoliteFetcher(config, stats);
 //   var html = await fetcher.GetAsync("https://itch.io/games/tag-horror"); // null on failure
 
 using System.Diagnostics;
@@ -77,7 +78,7 @@ public sealed class RateLimiter
 }
 
 /// <summary>Polite HTTP GET client for itch.io with cache + retry + logging.</summary>
-public sealed class ItchFetcher : IDisposable
+public sealed class PoliteFetcher : IDisposable
 {
     public ItchScraperConfig Config { get; }
     public RunStats Stats { get; }
@@ -91,7 +92,7 @@ public sealed class ItchFetcher : IDisposable
     /// <param name="http">Optional pre-configured <see cref="HttpClient"/> (tests inject a stub here).</param>
     /// <param name="cache">Optional response cache; built from config when omitted.</param>
     /// <param name="limiter">Optional rate limiter; built from config otherwise.</param>
-    public ItchFetcher(
+    public PoliteFetcher(
         ItchScraperConfig config,
         RunStats stats,
         HttpClient? http = null,
@@ -136,7 +137,9 @@ public sealed class ItchFetcher : IDisposable
     /// the server answered with a permanent error (4xx other than 429).</returns>
     public async Task<string?> GetAsync(string url, IDictionary<string, object?>? context = null)
     {
+        // Responses are cached per host so the two sources never collide.
         var target = Absolute(url);
+        Cache.Scope = ScopeFor(target);
 
         var cached = Cache.Get(target);
         if (cached is not null)
@@ -228,10 +231,20 @@ public sealed class ItchFetcher : IDisposable
     // ------------------------------------------------------------------ //
     // helpers                                                            //
     // ------------------------------------------------------------------ //
-    /// <summary>Resolve <paramref name="url"/> against itch.io so cache keys stay consistent.</summary>
+    /// <summary>Cache scope (sub-directory name) for a URL's host.</summary>
+    public static string ScopeFor(string url)
+    {
+        var host = Uri.TryCreate(url, UriKind.Absolute, out var uri) ? uri.Host : "other";
+        var safe = new string(host.Where(ch => char.IsLetterOrDigit(ch) || ch == '-').ToArray());
+        return safe.Length > 0 ? safe : "other";
+    }
+
+    /// <summary>Resolve <paramref name="url"/> against <paramref name="baseUrl"/> so
+    /// relative links (and cache keys) stay consistent regardless of the source site.</summary>
     public static string Absolute(string url, string baseUrl = "https://itch.io/")
     {
-        if (Uri.TryCreate(new Uri(baseUrl), url, out var resolved)) return resolved.ToString();
+        if (!Uri.TryCreate(baseUrl, UriKind.Absolute, out var baseUri)) return url;
+        if (Uri.TryCreate(baseUri, url, out var resolved)) return resolved.ToString();
         return url;
     }
 

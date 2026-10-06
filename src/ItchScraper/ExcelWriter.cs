@@ -141,7 +141,7 @@ public static class ExcelWriter
     // ------------------------------------------------------------------ //
     // writing                                                            //
     // ------------------------------------------------------------------ //
-    /// <summary>Write the itch-only sheet plus the combined sheet into the workbook.</summary>
+    /// <summary>Write the single three-sheet workbook: Combined / Steam / Itch.</summary>
     /// <param name="table">Cleaned itch records.</param>
     /// <param name="workbookPath">Target .xlsx file (parents are created).</param>
     /// <param name="sheetItch">/</param>
@@ -151,35 +151,30 @@ public static class ExcelWriter
     /// Steam sheet found in an existing workbook is reused for the combined view.</param>
     /// <param name="stats">Optional run-stats object for logging.</param>
     /// <returns>{sheet_name: row_count} for the sheets this call touched.</returns>
-    public static Dictionary<string, int> WriteItchSheet(
-        GameTable table,
+    public static Dictionary<string, int> WriteWorkbook(
+        GameTable? itchTable,
+        GameTable? steamTable,
         string workbookPath,
-        string sheetItch = "Itch",
-        string sheetSteam = "Steam",
         string sheetCombined = "Combined",
-        GameTable? steamTable = null,
+        string sheetSteam = "Steam",
+        string sheetItch = "Itch",
         RunStats? stats = null)
     {
         Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(workbookPath)) ?? ".");
 
-        var itchClean = PrepareSheetTable(table);
-        var steamExisting = steamTable is null ? ReadExistingSheet(workbookPath, sheetSteam) : null;
-        GameTable steamClean;
-        if (steamTable is not null)
-        {
-            steamClean = steamTable.Count > 0 ? PrepareSheetTable(steamTable) : EmptySchemaTable();
-        }
-        else
-        {
-            steamClean = steamExisting is not null && steamExisting.Count > 0
-                ? PrepareSheetTable(steamExisting)
-                : EmptySchemaTable();
-        }
+        // A source skipped this run keeps whatever an earlier run wrote, so the
+        // three sheets always reflect the freshest data from both stores.
+        var itchClean = itchTable is { Count: > 0 }
+            ? PrepareSheetTable(itchTable)
+            : FallbackOrEmpty(workbookPath, sheetItch, ranThisRun: itchTable is not null);
+        var steamClean = steamTable is { Count: > 0 }
+            ? PrepareSheetTable(steamTable)
+            : FallbackOrEmpty(workbookPath, sheetSteam, ranThisRun: steamTable is not null);
 
         var sheets = new Dictionary<string, GameTable>(StringComparer.Ordinal)
         {
             [sheetCombined] = CombinedTable(itchClean, steamClean),
-            [sheetSteam] = steamClean.Count > 0 ? steamClean : EmptySchemaTable(),
+            [sheetSteam] = steamClean,
             [sheetItch] = itchClean,
         };
 
@@ -229,6 +224,15 @@ public static class ExcelWriter
 
     private static GameTable EmptySchemaTable() =>
         new GameTable(SchemaColumns.ToList(), new List<Record>());
+
+    /// <summary>Reuse the previous sheet content when a source produced no rows
+    /// this run (empty result -> truly empty sheet; skipped source -> keep old).</summary>
+    private static GameTable FallbackOrEmpty(string workbookPath, string sheetName, bool ranButEmpty)
+    {
+        if (ranButEmpty) return EmptySchemaTable();
+        var existing = ReadExistingSheet(workbookPath, sheetName);
+        return existing is { Count: > 0 } ? PrepareSheetTable(existing) : EmptySchemaTable();
+    }
 
     /// <summary>Write one sheet and apply header formatting / column widths.</summary>
     private static void WriteOne(XLWorkbook book, GameTable table, string sheetName, RunStats? stats)

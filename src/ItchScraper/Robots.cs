@@ -26,6 +26,9 @@ public sealed class RobotsPolicy
     /// <summary>Why the policy is permissive, when it is.</summary>
     public string? Reason { get; init; }
 
+    /// <summary>Site origin this policy was loaded from (for relative-URL checks).</summary>
+    public string Origin { get; init; } = "https://itch.io/";
+
     private RobotsPolicy(string userAgent) => _userAgent = userAgent;
 
     // ------------------------------------------------------------------ //
@@ -161,19 +164,21 @@ public sealed class RobotsPolicy
     internal static string Absolutize(string url)
     {
         if (url.StartsWith("http", StringComparison.OrdinalIgnoreCase)) return url;
-        return new Uri(new Uri("https://itch.io/"), url).ToString();
+        // Relative links resolve against the site this policy belongs to.
+        var origin = Origin;
+        return new Uri(new Uri(origin), url).ToString();
     }
 }
 
 public static class RobotsFetcher
 {
     /// <summary>Download (through the rate-limited fetcher) and build the policy.</summary>
-    /// <param name="fetcher">Object exposing GetAsync(url) - typically <see cref="ItchFetcher"/>.</param>
+    /// <param name="fetcher">Object exposing GetAsync(url) - typically <see cref="PoliteFetcher"/>.</param>
     /// <param name="stats">Optional run-stats object used for logging/failure records.</param>
     /// <param name="robotsUrl">Location of the robots file.</param>
     /// <returns>A <see cref="RobotsPolicy"/>; permissive when the file cannot be read.</returns>
     public static async Task<RobotsPolicy> FetchRobotsAsync(
-        ItchFetcher fetcher, RunStats? stats = null,
+        PoliteFetcher fetcher, RunStats? stats = null,
         string robotsUrl = "https://itch.io/robots.txt")
     {
         string? text;
@@ -197,6 +202,10 @@ public static class RobotsFetcher
         try
         {
             policy = RobotsPolicy.FromText(text, fetcher.UserAgent);
+            if (Uri.TryCreate(robotsUrl, UriKind.Absolute, out var robotsUri))
+            {
+                policy = policy.WithOrigin($"{robotsUri.Scheme}://{robotsUri.Host}/");
+            }
         }
         catch (Exception e)
         {
