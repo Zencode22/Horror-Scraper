@@ -2,13 +2,13 @@
   "ebf45684388fef950960df00b56fd1152b511889": {
     "url": "https://store.steampowered.com/robots.txt",
     "status": 200,
-    "last_seen": 1791313468.251,
-    "hits": 4
+    "last_seen": 1791316321.804,
+    "hits": 6
   },
   "f8ff06fd4cad5449e69e3825da47c6709c209a05": {
     "url": "https://store.steampowered.com/search/?category_2=21\u0026sortBy=Desc\u0026count=75",
     "status": 200,
-    "last_seen": 1791313468.274,
-    "hits": 2
+    "last_seen": 1791316321.844,
+    "hits": 4
   }
 }
