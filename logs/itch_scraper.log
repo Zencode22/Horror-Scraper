@@ -1,0 +1,117 @@
+2026-10-06 18:39:58 | INFO    | itch_scraper | starting itch.io scrape | pages<= 3 | details=True
+2026-10-06 18:40:00 | INFO    | itch_scraper | robots.txt loaded (8 disallow rule(s): /embed/, /embed-upload/, /search, /checkout/, /game/download/, /bundle/download/, /register-for-purchase/, /email-feedback/)
+2026-10-06 18:40:01 | INFO    | itch_scraper | robots.txt loaded (9 disallow rule(s): /share/, /news/externalpost/, /account/emailoptout/?*token=, /account/notificationsettings/?*token=, /login/?*guestpasskey=, /join/?*redir=, /account/ackgift/, /email/, /widget/)
+2026-10-06 18:40:03 | INFO    | itch_scraper | page 1 of https://itch.io/games/tag-horror -> 36 games
+2026-10-06 18:40:05 | INFO    | itch_scraper | page 2 of https://itch.io/?page=2 -> 66 games
+2026-10-06 18:40:06 | INFO    | itch_scraper | page 1 of https://itch.io/games/newest/tag-horror -> 36 games
+2026-10-06 18:40:06 | INFO    | itch_scraper | cache hit  https://itch.io/?page=2 (2 s old)
+2026-10-06 18:40:06 | INFO    | itch_scraper | page 2 of https://itch.io/?page=2 -> 66 games
+2026-10-06 18:40:06 | INFO    | itch_scraper | collected 204 listing rows from 2 source(s)
+2026-10-06 18:40:06 | INFO    | itch_scraper | detail requests capped at 120 of 133 unique games
+2026-10-06 18:40:33 | INFO    | itch_scraper | details: 20/120 fetched
+2026-10-06 18:41:06 | INFO    | itch_scraper | details: 40/120 fetched
+2026-10-06 18:41:31 | INFO    | itch_scraper | starting itch.io scrape | pages<= 3 | details=True
+2026-10-06 18:41:31 | INFO    | itch_scraper | cache hit  https://itch.io/robots.txt (91 s old)
+2026-10-06 18:41:31 | INFO    | itch_scraper | robots.txt loaded (8 disallow rule(s): /embed/, /embed-upload/, /search, /checkout/, /game/download/, /bundle/download/, /register-for-purchase/, /email-feedback/)
+2026-10-06 18:41:31 | INFO    | itch_scraper | cache hit  https://store.steampowered.com/robots.txt (90 s old)
+2026-10-06 18:41:31 | INFO    | itch_scraper | robots.txt loaded (9 disallow rule(s): /share/, /news/externalpost/, /account/emailoptout/?*token=, /account/notificationsettings/?*token=, /login/?*guestpasskey=, /join/?*redir=, /account/ackgift/, /email/, /widget/)
+2026-10-06 18:41:31 | INFO    | itch_scraper | cache hit  https://itch.io/games/tag-horror (88 s old)
+2026-10-06 18:41:31 | INFO    | itch_scraper | page 1 of https://itch.io/games/tag-horror -> 36 games
+2026-10-06 18:41:31 | INFO    | itch_scraper | cache hit  https://itch.io/?page=2 (87 s old)
+2026-10-06 18:41:31 | INFO    | itch_scraper | page 2 of https://itch.io/?page=2 -> 66 games
+2026-10-06 18:41:31 | INFO    | itch_scraper | cache hit  https://itch.io/games/newest/tag-horror (85 s old)
+2026-10-06 18:41:31 | INFO    | itch_scraper | page 1 of https://itch.io/games/newest/tag-horror -> 36 games
+2026-10-06 18:41:31 | INFO    | itch_scraper | cache hit  https://itch.io/?page=2 (87 s old)
+2026-10-06 18:41:31 | INFO    | itch_scraper | page 2 of https://itch.io/?page=2 -> 66 games
+2026-10-06 18:41:31 | INFO    | itch_scraper | collected 204 listing rows from 2 source(s)
+2026-10-06 18:41:31 | INFO    | itch_scraper | detail requests capped at 120 of 133 unique games
+2026-10-06 18:41:31 | INFO    | itch_scraper | cache hit  https://zieelane.itch.io/helping-your-boyfriend (84 s old)
+2026-10-06 18:41:31 | INFO    | itch_scraper | cache hit  https://posmnaut.itch.io/pig-iron (82 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://entityzeta.itch.io/caso-northport (81 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://the-blue-hatted.itch.io/fnaftheflipside (79 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://junekazoo.itch.io/bleeding-in-ink (79 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://3005jin.itch.io/sweet-instincts (77 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://garula.itch.io/the-freak-circus (75 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://mrdrnose.itch.io/votv (74 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://nukepop.itch.io/save-the-shapes-chapter-2-diamonds-revenge (72 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://mookichuu.itch.io/overdose (71 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://ossuario.itch.io/my-own-sweet-dionaea (69 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://xlaucifer.itch.io/remember (68 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://teamsalvato.itch.io/ddlc (67 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://dacuriblue.itch.io/thegardener (66 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://comfortkuma.itch.io/next-station-the-moon (65 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://cutiesai.itch.io/14dayswithyou (63 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://iamderlencer.itch.io/keep-it-on (62 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://selyk-alien.itch.io/obsession (61 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://redspringstudio.itch.io/touchstarved (60 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://sourmiiiilk.itch.io/online-obsession (59 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | details: 20/120 fetched
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://livingslime.itch.io/prescriptionlove (57 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://puppetcombo.itch.io/nun-massacre (55 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://zv-games.itch.io/roseandcross (54 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://raycastly.itch.io/stoned (52 s old)
+2026-10-06 18:41:32 | INFO    | itch_scraper | cache hit  https://llonelly.itch.io/jackknife (51 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://comfortkuma.itch.io/knee-deep (50 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://arghbulous.itch.io/the-muzeum (48 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://eternal-kosetsu.itch.io/burnt-toast (46 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://kittyhorrorshow.itch.io/anatomy (45 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://thewindyproject.itch.io/bleach-and-blood (43 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://nso9019.itch.io/roam (42 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://racheldrawsthis.itch.io/elevator-hitch (40 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://oxtord.itch.io/mrtomatos (38 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://racheldrawsthis.itch.io/dead-plate (37 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://sfour-s4.itch.io/how-to-date-an-entity (36 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://colourplay-games.itch.io/the-arcade-demo (34 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://oddly-shaped-pixels.itch.io/alpine (33 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://dalichrome.itch.io/house-rules (30 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://prettyscar.itch.io/uppercute (29 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://galaxytrail.itch.io/petal-crash-2 (28 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | details: 40/120 fetched
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://placeholders.itch.io/tiny-brutalism (27 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://cartomancyanthology.itch.io/cartomancy-anthology (25 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://pizzapranks.itch.io/indiepocalypse-81 (23 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://eastshadestudios.itch.io/songs-of-glimmerwick (22 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://molleindustria.itch.io/future-no-thanks (20 s old)
+2026-10-06 18:41:33 | INFO    | itch_scraper | cache hit  https://punkcake.itch.io/spaghetti-celesti (19 s old)
+2026-10-06 18:41:34 | INFO    | itch_scraper | cache hit  https://managore.itch.io/throrbs (17 s old)
+2026-10-06 18:41:34 | INFO    | itch_scraper | cache hit  https://dialobic.itch.io/swamp-and-luig (16 s old)
+2026-10-06 18:41:34 | INFO    | itch_scraper | cache hit  https://psytronik.itch.io/joa (14 s old)
+2026-10-06 18:41:34 | INFO    | itch_scraper | cache hit  https://leafo.itch.io/rock-declutterer (13 s old)
+2026-10-06 18:41:34 | INFO    | itch_scraper | cache hit  https://dionous.itch.io/murder-on-space-station-52 (12 s old)
+2026-10-06 18:41:34 | INFO    | itch_scraper | cache hit  https://fallahn.itch.io/super-video-golf (11 s old)
+2026-10-06 18:41:34 | INFO    | itch_scraper | cache hit  https://sitrex.itch.io/eat-not-want-not (9 s old)
+2026-10-06 18:41:34 | INFO    | itch_scraper | cache hit  https://akuparagames.itch.io/montabi (7 s old)
+2026-10-06 18:41:44 | INFO    | itch_scraper | details: 60/120 fetched
+2026-10-06 18:42:14 | INFO    | itch_scraper | details: 80/120 fetched
+2026-10-06 18:42:43 | INFO    | itch_scraper | details: 100/120 fetched
+2026-10-06 18:54:39 | INFO    | itch_scraper | starting combined scrape | sources=[] | pages<= 1
+2026-10-06 18:54:39 | INFO    | itch_scraper | cache hit  https://itch.io/robots.txt (879 s old)
+2026-10-06 18:54:39 | INFO    | itch_scraper | robots.txt loaded (8 disallow rule(s): /embed/, /embed-upload/, /search, /checkout/, /game/download/, /bundle/download/, /register-for-purchase/, /email-feedback/)
+2026-10-06 18:54:39 | INFO    | itch_scraper | cache hit  https://store.steampowered.com/robots.txt (878 s old)
+2026-10-06 18:54:39 | INFO    | itch_scraper | robots.txt loaded (9 disallow rule(s): /share/, /news/externalpost/, /account/emailoptout/?*token=, /account/notificationsettings/?*token=, /login/?*guestpasskey=, /join/?*redir=, /account/ackgift/, /email/, /widget/)
+2026-10-06 18:54:40 | INFO    | itch_scraper | steam: no result rows on https://store.steampowered.com/search/?category_2=21&sortBy=Desc&count=75 (end of list or layout change) - stopping
+2026-10-06 18:54:40 | INFO    | itch_scraper | steam: collected 0 listing rows from 1 source(s)
+2026-10-06 18:54:40 | INFO    | itch_scraper | cleaning: 0 raw -> 0 rows (0 unique after dedupe pass), 0/1 carry a release date
+2026-10-06 18:54:40 | INFO    | itch_scraper | cache hit  https://itch.io/games/tag-horror (877 s old)
+2026-10-06 18:54:40 | INFO    | itch_scraper | page 1 of https://itch.io/games/tag-horror -> 36 games
+2026-10-06 18:54:40 | INFO    | itch_scraper | cache hit  https://itch.io/games/newest/tag-horror (874 s old)
+2026-10-06 18:54:41 | INFO    | itch_scraper | page 1 of https://itch.io/games/newest/tag-horror -> 36 games
+2026-10-06 18:54:41 | INFO    | itch_scraper | collected 72 listing rows from 2 source(s)
+2026-10-06 18:54:41 | INFO    | itch_scraper | cleaning: 72 raw -> 72 rows (72 unique after dedupe pass), 0/72 carry a release date
+2026-10-06 18:54:41 | INFO    | itch_scraper | wrote Combined=72 rows, Steam=0 rows, Itch=72 rows -> /workspace/output/workbook.xlsx
+2026-10-06 19:04:28 | INFO    | itch_scraper | starting combined scrape | sources=[] | pages<= 1
+2026-10-06 19:04:28 | INFO    | itch_scraper | cache hit  https://itch.io/robots.txt (1468 s old)
+2026-10-06 19:04:28 | INFO    | itch_scraper | robots.txt loaded (8 disallow rule(s): /embed/, /embed-upload/, /search, /checkout/, /game/download/, /bundle/download/, /register-for-purchase/, /email-feedback/)
+2026-10-06 19:04:28 | INFO    | itch_scraper | cache hit  https://store.steampowered.com/robots.txt (1467 s old)
+2026-10-06 19:04:28 | INFO    | itch_scraper | robots.txt loaded (9 disallow rule(s): /share/, /news/externalpost/, /account/emailoptout/?*token=, /account/notificationsettings/?*token=, /login/?*guestpasskey=, /join/?*redir=, /account/ackgift/, /email/, /widget/)
+2026-10-06 19:04:28 | INFO    | itch_scraper | cache hit  https://store.steampowered.com/search/?category_2=21&sortBy=Desc&count=75 (588 s old)
+2026-10-06 19:04:28 | INFO    | itch_scraper | steam: no result rows on https://store.steampowered.com/search/?category_2=21&sortBy=Desc&count=75 (end of list or layout change) - stopping
+2026-10-06 19:04:28 | INFO    | itch_scraper | steam: collected 0 listing rows from 1 source(s)
+2026-10-06 19:04:28 | INFO    | itch_scraper | cleaning: 0 raw -> 0 rows (0 unique after dedupe pass), 0/1 carry a release date
+2026-10-06 19:04:28 | INFO    | itch_scraper | cache hit  https://itch.io/games/tag-horror (1465 s old)
+2026-10-06 19:04:28 | INFO    | itch_scraper | page 1 of https://itch.io/games/tag-horror -> 36 games
+2026-10-06 19:04:28 | INFO    | itch_scraper | cache hit  https://itch.io/games/newest/tag-horror (1462 s old)
+2026-10-06 19:04:28 | INFO    | itch_scraper | page 1 of https://itch.io/games/newest/tag-horror -> 36 games
+2026-10-06 19:04:28 | INFO    | itch_scraper | collected 72 listing rows from 2 source(s)
+2026-10-06 19:04:28 | INFO    | itch_scraper | cleaning: 72 raw -> 72 rows (72 unique after dedupe pass), 0/72 carry a release date
+2026-10-06 19:04:29 | INFO    | itch_scraper | wrote Combined=72 rows, Steam=0 rows, Itch=72 rows -> /workspace/output/workbook.xlsx
