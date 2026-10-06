@@ -1,9 +1,3 @@
-# Build artifacts and dependencies
+# .NET build artifacts
 bin/
 obj/
-
-# Cache directories
-cache/
-
-# Logs
-logs/
