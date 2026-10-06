@@ -39,13 +39,21 @@ public static class SteamPipeline
 
         var merged = Cleaning.MergeDetails(listings, detailsByUrl);
 
-        // "Free To Play" rows carry no numeric price span; normalize them to 0
-        // so the validator keeps them (Steam never shows an explicit "$0.00").
+        // "Free To Play" rows carry no numeric price span. Steam never shows an
+        // explicit "$0.00", so we detect the free wording on *either* the raw
+        // price text or the (un-normalised) price_usd and force it to 0.0.
+        // Without this fix those rows survive parsing, then NormalizeRows turns
+        // "Free To Play" into NaN, and ValidateRows silently drops them.
         foreach (var row in merged)
         {
-            var priceText = Utils.CleanText(row.Get("price_raw")).ToLowerInvariant();
-            if (!row.Has("price_usd") && priceText.Contains("free"))
+            var raw = Utils.CleanText(row.Get("price_raw")).ToLowerInvariant();
+            var usd = Utils.CleanText(row.Get("price_usd")).ToLowerInvariant();
+            var looksFree = raw.Contains("free")
+                         || usd.Contains("free")
+                         || (raw.Length == 0 && usd.Length == 0);
+            if (looksFree)
             {
+                row["price_raw"] = "$0";
                 row["price_usd"] = 0.0;
             }
         }

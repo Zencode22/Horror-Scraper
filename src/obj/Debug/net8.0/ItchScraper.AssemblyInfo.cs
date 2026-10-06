@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ItchScraper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be16e66e63800ba36ab07ed368b3533e7665a060")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6637deb04a84026b9f72417044b670b7dc6f9f7c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ItchScraper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ItchScraper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

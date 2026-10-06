@@ -2,55 +2,55 @@
   "835677285d52acccc07103bff25fcb9db3174fe3": {
     "url": "https://itch.io/robots.txt",
     "status": 200,
-    "last_seen": 1791316321.793,
-    "hits": 6
+    "last_seen": 1791317782.806,
+    "hits": 7
   },
   "e95ab25b0f255e42211ca2ebe59ce9b3cdf91545": {
     "url": "https://itch.io/games/tag-horror",
     "status": 200,
-    "last_seen": 1791316322.144,
-    "hits": 6
+    "last_seen": 1791318014.709,
+    "hits": 7
   },
   "2fc90755d212ae71e790827c8bd8ca9a49aa72d0": {
     "url": "https://itch.io/?page=2",
     "status": 200,
-    "last_seen": 1791316322.351,
-    "hits": 8
+    "last_seen": 1791318014.782,
+    "hits": 10
   },
   "60b0400ce99bf9a76abc1df5e71c543c6fed2ee4": {
     "url": "https://itch.io/games/newest/tag-horror",
     "status": 200,
-    "last_seen": 1791316322.285,
-    "hits": 6
+    "last_seen": 1791318014.749,
+    "hits": 7
   },
   "20bf79c953c04308ca34b25d406b2cf06ab853c4": {
     "url": "https://itch.io/jam/mini-jam-221-autumn",
     "status": 200,
-    "last_seen": 1791316325.029,
-    "hits": 3
+    "last_seen": 1791318015.526,
+    "hits": 4
   },
   "bbd928084f0a5aa5b4e3e88badde8054d0cb4ba0": {
     "url": "https://itch.io/jam/gdevelop-big-game-jam-10",
     "status": 200,
-    "last_seen": 1791316325.039,
-    "hits": 3
+    "last_seen": 1791318015.547,
+    "hits": 4
   },
   "92db76a6dc324912b2270d83a4a5b41dc634b7fc": {
     "url": "https://itch.io/jam/metroidvania-month-34",
     "status": 200,
-    "last_seen": 1791316325.048,
-    "hits": 3
+    "last_seen": 1791318015.567,
+    "hits": 4
   },
   "cf433ef35967bb118069ac352b61f7b05575cd48": {
     "url": "https://itch.io/jam/trijam-393",
     "status": 200,
-    "last_seen": 1791316325.058,
-    "hits": 3
+    "last_seen": 1791318015.589,
+    "hits": 4
   },
   "3799c1dd0727c8ae9a15e963aef13b53498b0153": {
     "url": "https://itch.io/jam/lve-jam-2026-b-side",
     "status": 200,
-    "last_seen": 1791316325.068,
-    "hits": 3
+    "last_seen": 1791318015.609,
+    "hits": 4
   }
 }

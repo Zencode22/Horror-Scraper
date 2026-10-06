@@ -2,13 +2,931 @@
   "ebf45684388fef950960df00b56fd1152b511889": {
     "url": "https://store.steampowered.com/robots.txt",
     "status": 200,
-    "last_seen": 1791316321.804,
-    "hits": 6
+    "last_seen": 1791317782.816,
+    "hits": 7
   },
   "f8ff06fd4cad5449e69e3825da47c6709c209a05": {
     "url": "https://store.steampowered.com/search/?category_2=21\u0026sortBy=Desc\u0026count=75",
     "status": 200,
     "last_seen": 1791316321.844,
     "hits": 4
+  },
+  "e68f6b3f3ace6e8373c947880ed75a3c05166fda": {
+    "url": "https://store.steampowered.com/search/?genre=Horror\u0026sortBy=Released\u0026count=75",
+    "status": 200,
+    "last_seen": 1791317785.018,
+    "hits": 1
+  },
+  "d54644874f66666c1b4a8e5287f8df97562b7bd9": {
+    "url": "https://store.steampowered.com/search/?genre=Horror\u0026sortBy=Released\u0026count=75\u0026start=75",
+    "status": 200,
+    "last_seen": 1791317786.183,
+    "hits": 1
+  },
+  "7257fb327b4ead2a7c8187f5b9ae6ad22f54f797": {
+    "url": "https://store.steampowered.com/search/?genre=Horror\u0026sortBy=Released\u0026count=75\u0026start=150",
+    "status": 200,
+    "last_seen": 1791317787.882,
+    "hits": 1
+  },
+  "5fbe22c0c390ebe96130028bf27d22a0c82a0e91": {
+    "url": "https://store.steampowered.com/app/730/CounterStrike_2/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317789.488,
+    "hits": 1
+  },
+  "4e1a71e903d16fae3fe351c3962dd643a6067e6f": {
+    "url": "https://store.steampowered.com/app/3393110/AION_2/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317790.767,
+    "hits": 1
+  },
+  "f94116aacb77882a0365a483accbf473927a4633": {
+    "url": "https://store.steampowered.com/app/3010850/Gears_of_War_EDay/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317792.412,
+    "hits": 1
+  },
+  "1d0ad1a7d0e7623acdc81c24ded39b38623539ad": {
+    "url": "https://store.steampowered.com/app/1867240/WARDOGS/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317793.366,
+    "hits": 1
+  },
+  "b265075107713c8c9f142fc8109c4f4e0e5fc53a": {
+    "url": "https://store.steampowered.com/app/2288340/ACE_COMBAT_8_WINGS_OF_THEVE/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317794.458,
+    "hits": 1
+  },
+  "59a7a63e420ae660358e314cbbb2f1d61759b942": {
+    "url": "https://store.steampowered.com/app/4019220/Dressmaker/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317796.247,
+    "hits": 1
+  },
+  "a954ec0c60017a89df12372ed0bd48efaa95167c": {
+    "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317797.83,
+    "hits": 1
+  },
+  "eee764a521878d7ad8517038344c3654bd4cf0b8": {
+    "url": "https://store.steampowered.com/app/230410/Warframe/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317799.249,
+    "hits": 1
+  },
+  "29a638be09e1d63d2cb9aad0da9089610503b44f": {
+    "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317800.65,
+    "hits": 1
+  },
+  "973c4eb7917e3c065b30e165e2014977ee8ca01d": {
+    "url": "https://store.steampowered.com/app/2406770/Bodycam/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317801.562,
+    "hits": 1
+  },
+  "b576bf4c3bf6f16b968f04e9a1b7a92209e6a71c": {
+    "url": "https://store.steampowered.com/app/4126040/Aniimo/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317803.175,
+    "hits": 1
+  },
+  "911e20c3da3a6feba1cc6a866c6cd78d003c667b": {
+    "url": "https://store.steampowered.com/app/3513350/Wuthering_Waves/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317804.402,
+    "hits": 1
+  },
+  "9b6ebf2b84be5d51f666489d2e5a9d88fdfa2685": {
+    "url": "https://store.steampowered.com/app/2767030/Marvel_Rivals/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317805.952,
+    "hits": 1
+  },
+  "848820323a6892d40a01538438da68688c52d4f9": {
+    "url": "https://store.steampowered.com/app/1172470/Apex_Legends/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317807.603,
+    "hits": 1
+  },
+  "2e5c5c447e4d70bc6901d18af35592259790d3a6": {
+    "url": "https://store.steampowered.com/app/4001890/How_to_Fish/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317808.659,
+    "hits": 1
+  },
+  "5598493e3c6cd8390edd137b15a32d4d00442dc9": {
+    "url": "https://store.steampowered.com/app/553850/HELLDIVERS_2/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317810.237,
+    "hits": 1
+  },
+  "9d19ecf71568397caf5054990b40a3bc0d76534f": {
+    "url": "https://store.steampowered.com/app/1086940/Baldurs_Gate_3/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317812.335,
+    "hits": 1
+  },
+  "877019dc52d35fb5cd7aeac1199cda092eab8232": {
+    "url": "https://store.steampowered.com/app/4078430/STAR_WARS_Galactic_Racer/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317813.838,
+    "hits": 1
+  },
+  "9eee2cba63ba951dcf00d41c49c2f5fcb232d696": {
+    "url": "https://store.steampowered.com/app/2183900/Warhammer_40000_Space_Marine_2/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317815.227,
+    "hits": 1
+  },
+  "01eeba7632579dd37011703443e1602d8896cc36": {
+    "url": "https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317816.97,
+    "hits": 1
+  },
+  "56d0272a652771e4b91179fa6fb547388eb66556": {
+    "url": "https://store.steampowered.com/app/216150/MapleStory/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317817.948,
+    "hits": 1
+  },
+  "0ca1038990b122954a68a43484208d20b7e8711c": {
+    "url": "https://store.steampowered.com/app/1142710/Total_War_WARHAMMER_III/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317819.91,
+    "hits": 1
+  },
+  "b2c9656df2b7b799ef1b33cb747b7f92a235d1c7": {
+    "url": "https://store.steampowered.com/app/1085660/Destiny_2/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317820.944,
+    "hits": 1
+  },
+  "8a2c6dec0f36fabb24468b12ccf4111d42eff65f": {
+    "url": "https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317822.304,
+    "hits": 1
+  },
+  "72ea639393471819dde5e962459b77379a0edc13": {
+    "url": "https://store.steampowered.com/app/270880/American_Truck_Simulator/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317824.019,
+    "hits": 1
+  },
+  "c69cd7aeb2cc668d40b6fba34b419e7007d3bea4": {
+    "url": "https://store.steampowered.com/app/1478500/Big_Walk/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317825.896,
+    "hits": 1
+  },
+  "82a595b37b6121373901f525071b84c1b8c30e08": {
+    "url": "https://store.steampowered.com/app/108600/Project_Zomboid/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317827.436,
+    "hits": 1
+  },
+  "efe5b20a20254b95b0ef22fe828ff72cf157fbeb": {
+    "url": "https://store.steampowered.com/app/3669870/CONTROL_Resonant/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317829.5,
+    "hits": 1
+  },
+  "426a5375c20b859fe0b134e865bb8a8f85abc2f2": {
+    "url": "https://store.steampowered.com/app/1304930/The_Outlast_Trials/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317830.448,
+    "hits": 1
+  },
+  "95e420b97fd4d1dd17fb2258aa7fcc03b7e92da2": {
+    "url": "https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317832.007,
+    "hits": 1
+  },
+  "344b249c485da651a6bfaf8dc43b2de01a25faf3": {
+    "url": "https://store.steampowered.com/app/3932890/Escape_from_Tarkov/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317833.3,
+    "hits": 1
+  },
+  "cd3d5daec70bb913fc22a607870c4584cb6f81ca": {
+    "url": "https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317834.552,
+    "hits": 1
+  },
+  "fb2530ec32b054678dad174d56906ceb4842621e": {
+    "url": "https://store.steampowered.com/app/1158310/Crusader_Kings_III/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317836.814,
+    "hits": 1
+  },
+  "9b5e059e50802da5d5d87780815d72befcddc62a": {
+    "url": "https://store.steampowered.com/app/1374490/RuneScape_Dragonwilds/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317838.621,
+    "hits": 1
+  },
+  "f10f63b2c8a407d0e32213bfac8e5c989071e0c6": {
+    "url": "https://store.steampowered.com/app/2483190/Forza_Horizon_6/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317840.065,
+    "hits": 1
+  },
+  "1bcc84b1a360ba5ce1d854a2f0df7f7fe3ade373": {
+    "url": "https://store.steampowered.com/app/252490/Rust/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317841.517,
+    "hits": 1
+  },
+  "10ddc122d50ad962019b8d6d462afb19c1ab7b1a": {
+    "url": "https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V_Enhanced/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317842.81,
+    "hits": 1
+  },
+  "ef7c9556f8bf3546c5e44cc042d976f462768d21": {
+    "url": "https://store.steampowered.com/app/1912410/Minecraft_Dungeons_II/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317844.646,
+    "hits": 1
+  },
+  "75b978edb9c866a74ab102b0183917ee20604f76": {
+    "url": "https://store.steampowered.com/app/2141910/Magic_The_Gathering_Arena/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317846.62,
+    "hits": 1
+  },
+  "b11a9dfc1e5bbd57614dc68fd70e49f9d2f0ba5e": {
+    "url": "https://store.steampowered.com/app/1623730/Palworld/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317848.588,
+    "hits": 1
+  },
+  "d1f11c9e5f96cb71c12b03fe7dadb43b17e5beb8": {
+    "url": "https://store.steampowered.com/app/3764200/Resident_Evil_Requiem/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317850.18,
+    "hits": 1
+  },
+  "40edcf7089675c18cd1be2dcb3b2de9c7c9c2a26": {
+    "url": "https://store.steampowered.com/app/440/Team_Fortress_2/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317851.262,
+    "hits": 1
+  },
+  "d899588b714592927f69a000f212a787e0138a97": {
+    "url": "https://store.steampowered.com/app/2651280/Marvels_SpiderMan_2/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317852.922,
+    "hits": 1
+  },
+  "b7adb9b5bcb2de4b606fac88ef483736b0594636": {
+    "url": "https://store.steampowered.com/app/4356430/NBA_2K27/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317854.507,
+    "hits": 1
+  },
+  "1642d3e078690db24fb56955a43e3881d5d7c5bc": {
+    "url": "https://store.steampowered.com/app/236390/War_Thunder/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317855.581,
+    "hits": 1
+  },
+  "cccbf4a598cc2576ae7be0e99c70bd2eeefadcc0": {
+    "url": "https://store.steampowered.com/app/1449850/YuGiOh_Master_Duel/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317857.053,
+    "hits": 1
+  },
+  "31b6bd79399dd88c044857451489d22bc0a49c4f": {
+    "url": "https://store.steampowered.com/app/1144200/Ready_or_Not/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317858.537,
+    "hits": 1
+  },
+  "06aae7a43fe520e68ebbb09dacb385fd782e7f0b": {
+    "url": "https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt__Remastered/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317860.565,
+    "hits": 1
+  },
+  "e0503fafd14f2467800a901c5c20569d5cbb64cf": {
+    "url": "https://store.steampowered.com/app/2357570/Overwatch/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317862.401,
+    "hits": 1
+  },
+  "f5294ff537226f4d4093d29dc5d7bec71cbc177f": {
+    "url": "https://store.steampowered.com/app/4165910/Steam_Machine/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317863.538,
+    "hits": 1
+  },
+  "61aa9fc9a70f3510b694b60fd06dce30fad0540a": {
+    "url": "https://store.steampowered.com/app/2552430/KINGDOM_HEARTS_HD_1525_ReMIX/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317864.847,
+    "hits": 1
+  },
+  "0a241beca5f735eb15f6bf6f3f0b38ec9a77d78e": {
+    "url": "https://store.steampowered.com/app/2138330/Cyberpunk_2077_Phantom_Liberty/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317866.408,
+    "hits": 1
+  },
+  "4cfb6948c8496db6e7d0e650ecfca34d8f1c2367": {
+    "url": "https://store.steampowered.com/app/3493540/Transport_Fever_3/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317868.242,
+    "hits": 1
+  },
+  "2f506240657f97b610088ef63b4e181ffc3d10fc": {
+    "url": "https://store.steampowered.com/app/3768760/007_First_Light/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317869.604,
+    "hits": 1
+  },
+  "0e65ac9941b7aca4021040531f10753788f8b6d2": {
+    "url": "https://store.steampowered.com/app/1285190/Borderlands_4/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317870.768,
+    "hits": 1
+  },
+  "65c085559f8a7416577aebb9f23d03bdc2e4f1fb": {
+    "url": "https://store.steampowered.com/app/4165890/Steam_Frame/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317872.864,
+    "hits": 1
+  },
+  "d28580fd2d06957bdc2268227a9e7c97671080d4": {
+    "url": "https://store.steampowered.com/app/1222670/The_Sims_4/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317874.204,
+    "hits": 1
+  },
+  "77db1412c1975d2f6edf234da66997f28233e2fc": {
+    "url": "https://store.steampowered.com/app/570/Dota_2/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317875.194,
+    "hits": 1
+  },
+  "6ff88f7535c3efa818f0b249fc0f92af0e329ea6": {
+    "url": "https://store.steampowered.com/app/2139460/Once_Human/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317876.929,
+    "hits": 1
+  },
+  "a1d83cc3c321dc525c760b89bd972a7664690065": {
+    "url": "https://store.steampowered.com/app/1245620/ELDEN_RING/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317878.548,
+    "hits": 1
+  },
+  "adfa3be224a74e0c54d93a162a89c843c0ba45a6": {
+    "url": "https://store.steampowered.com/app/1151340/Fallout_76/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317879.882,
+    "hits": 1
+  },
+  "9e71d44f5bf018de05b521444af414f966351f62": {
+    "url": "https://store.steampowered.com/app/892970/Valheim/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317881.232,
+    "hits": 1
+  },
+  "6a5dab6067532d624f7721cf890cb0c40f3a91b8": {
+    "url": "https://store.steampowered.com/app/2807960/Battlefield_6/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317882.614,
+    "hits": 1
+  },
+  "3c91d36acdebdabfc0afb44303923b02acba6193": {
+    "url": "https://store.steampowered.com/app/1675200/Steam_Deck/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317883.964,
+    "hits": 1
+  },
+  "dcaf6b566c0420fb6589991d44df42bc7980a61a": {
+    "url": "https://store.steampowered.com/app/1771300/Kingdom_Come_Deliverance_II/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317885.585,
+    "hits": 1
+  },
+  "205a527d5e1ca3484699d992c2fce5122fa7e63d": {
+    "url": "https://store.steampowered.com/app/2246340/Monster_Hunter_Wilds/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317887.44,
+    "hits": 1
+  },
+  "94f5a0c82f9cc37408018380a2c84c7d85dd6abf": {
+    "url": "https://store.steampowered.com/app/2050650/Resident_Evil_4/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317889.283,
+    "hits": 1
+  },
+  "d8fe75bf9b26cc814a44936c492ea1ab03280a67": {
+    "url": "https://store.steampowered.com/app/1808500/ARC_Raiders/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317890.878,
+    "hits": 1
+  },
+  "6247e6d7c2294253156b1e3fa726aa9ca13c1395": {
+    "url": "https://store.steampowered.com/app/2054970/Dragons_Dogma_2/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317892.713,
+    "hits": 1
+  },
+  "1b02b85dba6f7f9de9696ef45cffb7bd926dd276": {
+    "url": "https://store.steampowered.com/app/275850/No_Mans_Sky/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317893.791,
+    "hits": 1
+  },
+  "c8858ff29a68f9d99a7fc244c0fa98da0222790e": {
+    "url": "https://store.steampowered.com/app/784080/MechWarrior_5_Mercenaries/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317895.124,
+    "hits": 1
+  },
+  "9c6e47ed131505ebbc02fb4508aa46a9e023fc2f": {
+    "url": "https://store.steampowered.com/app/306130/The_Elder_Scrolls_Online/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317896.397,
+    "hits": 1
+  },
+  "584e87e0251ba068e68022d049234cab982a9453": {
+    "url": "https://store.steampowered.com/app/4032350/EA_SPORTS_College_Football_27/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317897.749,
+    "hits": 1
+  },
+  "c8baea00fbddc2cfa9d438ae0b061d3251cd2631": {
+    "url": "https://store.steampowered.com/app/3751260/The_Blood_of_Dawnwalker/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317899.114,
+    "hits": 1
+  },
+  "b00b0eee3ffa57610fe68d69933daca5f11cc38c": {
+    "url": "https://store.steampowered.com/app/2887580/Active_Matter/?snr=1_7_7_230_150_1",
+    "status": 200,
+    "last_seen": 1791317900.459,
+    "hits": 1
+  },
+  "a154582dbf9f7a26bd244feae0d77346250999c9": {
+    "url": "https://store.steampowered.com/app/2075800/STAR_WARS_Zero_Company/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317901.605,
+    "hits": 1
+  },
+  "cb665f9a573af427425c3fb733001476e4472a0b": {
+    "url": "https://store.steampowered.com/app/2399830/ARK_Survival_Ascended/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317903.396,
+    "hits": 1
+  },
+  "590f2684c9f19e37c9110f213626023f49c70769": {
+    "url": "https://store.steampowered.com/app/39210/FINAL_FANTASY_XIV_Online/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317904.724,
+    "hits": 1
+  },
+  "decd1cb08429818c590446aeb06d58bcaccf5f01": {
+    "url": "https://store.steampowered.com/app/374320/DARK_SOULS_III/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317905.889,
+    "hits": 1
+  },
+  "910946a23136b89cbbb03a8cb2b22a35eaa1c47a": {
+    "url": "https://store.steampowered.com/app/1973530/Limbus_Company/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317907.844,
+    "hits": 1
+  },
+  "78c4f07a018d0d40f7f51abf2a2999a67d731b06": {
+    "url": "https://store.steampowered.com/app/1817070/Marvels_SpiderMan_Remastered/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317909.006,
+    "hits": 1
+  },
+  "5b611b4517a803878fdfc90705b4756b69da4833": {
+    "url": "https://store.steampowered.com/app/281990/Stellaris/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317910.54,
+    "hits": 1
+  },
+  "4644f3013ecf8c343bcc7b13eb092ead142437ee": {
+    "url": "https://store.steampowered.com/app/1326470/Sons_Of_The_Forest/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317912.13,
+    "hits": 1
+  },
+  "8937b6934095040b89ac26ea5f09a905a91e826a": {
+    "url": "https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317913.646,
+    "hits": 1
+  },
+  "cbc6306936fc267ed046b438ccee65ddd90d9c8c": {
+    "url": "https://store.steampowered.com/app/3892270/Gamble_With_Your_Friends/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317914.786,
+    "hits": 1
+  },
+  "623c85a3e3ab3e9bc8cc30ba0ed7399fd8338339": {
+    "url": "https://store.steampowered.com/app/3164500/Schedule_I/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317916.768,
+    "hits": 1
+  },
+  "052a472de09b3c0c7e3426bf2c968da802f93845": {
+    "url": "https://store.steampowered.com/app/1643320/STALKER_2_Heart_of_Chornobyl/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317917.839,
+    "hits": 1
+  },
+  "5a2f963bc92738d1a20d24ad1229173a0b7a6dc3": {
+    "url": "https://store.steampowered.com/app/1401590/Disney_Dreamlight_Valley/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317919.575,
+    "hits": 1
+  },
+  "d618b7b8aa2aabb51821c25be6345f27f61f7ff9": {
+    "url": "https://store.steampowered.com/app/413150/Stardew_Valley/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317920.854,
+    "hits": 1
+  },
+  "8c49c1678c83c720ec9c47effa53aaa1980c1f1c": {
+    "url": "https://store.steampowered.com/app/3219630/Halloween_The_Game/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317922.585,
+    "hits": 1
+  },
+  "eec83401b233755811bbf25f7ecb01c1e9ac2295": {
+    "url": "https://store.steampowered.com/app/1172710/Dune_Awakening/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317924.493,
+    "hits": 1
+  },
+  "575f05012645a83849c70962dfc7886628f8d2c2": {
+    "url": "https://store.steampowered.com/app/4435490/Call_of_Duty_Modern_Warfare_4/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317925.861,
+    "hits": 1
+  },
+  "74bd5802823409e09310db764b244a122192c8bb": {
+    "url": "https://store.steampowered.com/app/1488490/Nivalis_Nights/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317927.593,
+    "hits": 1
+  },
+  "cac0634a344c857335b1831ff9f319b527c22064": {
+    "url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317929.195,
+    "hits": 1
+  },
+  "9259caedb1462ee015b8e694306bfc1f95284e31": {
+    "url": "https://store.steampowered.com/app/3812600/ReStory_Chill_Electronics_Repairs/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317930.733,
+    "hits": 1
+  },
+  "094fe13fa335b0874ec1baeb6255bedcefeb778d": {
+    "url": "https://store.steampowered.com/app/294100/RimWorld/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317932.028,
+    "hits": 1
+  },
+  "6bb203130082758efc49ebc76cb69b94e138b241": {
+    "url": "https://store.steampowered.com/app/2215200/LEGO_Batman_Legacy_of_the_Dark_Knight/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317933.624,
+    "hits": 1
+  },
+  "eefec02a6c1ed17c5d50fcc900bbdae3a01c7599": {
+    "url": "https://store.steampowered.com/app/4165870/Steam_Controller/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317935.593,
+    "hits": 1
+  },
+  "88d9d018473a37b26a94736d3decbbaecef09bd6": {
+    "url": "https://store.steampowered.com/app/2537590/Microsoft_Flight_Simulator_2024/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317936.68,
+    "hits": 1
+  },
+  "4cdc2630c21d2a6faf233b827b2e5c28b8fa291a": {
+    "url": "https://store.steampowered.com/app/632360/Risk_of_Rain_2/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317938.437,
+    "hits": 1
+  },
+  "6361ba55cd265a05b873fd035960c829b5694e24": {
+    "url": "https://store.steampowered.com/app/2638890/Onimusha_Way_of_the_Sword/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317940.448,
+    "hits": 1
+  },
+  "e26f7f55f2248a6512a17d7ee56a8e8daa780cc5": {
+    "url": "https://store.steampowered.com/app/438100/VRChat/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317942.208,
+    "hits": 1
+  },
+  "d514d687bb7817140bc533892640417731e87a2f": {
+    "url": "https://store.steampowered.com/app/3357650/PRAGMATA/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317943.557,
+    "hits": 1
+  },
+  "d1ca36a9d8d34586d59d8c5bbaf755ff8a1b6d69": {
+    "url": "https://store.steampowered.com/app/1361210/Warhammer_40000_Darktide/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317945.166,
+    "hits": 1
+  },
+  "59c7396c91823703c33d2b9386520f0e3151883d": {
+    "url": "https://store.steampowered.com/app/266410/iRacing/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317947.038,
+    "hits": 1
+  },
+  "44a8af8dac71ea17bdc59a3cfb97ff0aed43fb8e": {
+    "url": "https://store.steampowered.com/app/2215430/Ghost_of_Tsushima_DIRECTORS_CUT/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317948.209,
+    "hits": 1
+  },
+  "e0f748a3a93db32107a3695774104459bd0062d6": {
+    "url": "https://store.steampowered.com/app/949230/Cities_Skylines_II/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317949.838,
+    "hits": 1
+  },
+  "1b747be2aa7273c3d1e10b50ce7a9a40f4582a98": {
+    "url": "https://store.steampowered.com/app/292000/No_More_Room_in_Hell_2/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317951.596,
+    "hits": 1
+  },
+  "113999f87e656d58791703971ad6f7f99f1e0a54": {
+    "url": "https://store.steampowered.com/app/2344520/Diablo_IV/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317952.659,
+    "hits": 1
+  },
+  "9f9f511a9688f71695950348facdc2bf1b332dce": {
+    "url": "https://store.steampowered.com/app/2161700/Persona_3_Reload/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317954.291,
+    "hits": 1
+  },
+  "44b4a09e100adcd05dc61f82ef6ee78e2ca56ff5": {
+    "url": "https://store.steampowered.com/app/1888930/The_Last_of_Us_Part_I/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317956.144,
+    "hits": 1
+  },
+  "2b1f176218fa704c3713544d67e0bf41ea9b4675": {
+    "url": "https://store.steampowered.com/app/3940610/EA_SPORTS_Madden_NFL_27/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317957.949,
+    "hits": 1
+  },
+  "84331a9d9b0f787973249d7bbc7c1e3b6fd4932c": {
+    "url": "https://store.steampowered.com/app/3321460/Crimson_Desert_Enhanced/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317959.639,
+    "hits": 1
+  },
+  "161a856030625a78c07591c18864ab43726c3c8e": {
+    "url": "https://store.steampowered.com/app/582660/Black_Desert/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317961.129,
+    "hits": 1
+  },
+  "9799bbc752e7286c59d7d2f273fb96e13ccee0d9": {
+    "url": "https://store.steampowered.com/app/814380/Sekiro_Shadows_Die_Twice__GOTY_Edition/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317962.234,
+    "hits": 1
+  },
+  "a289a2f976f4b43840b1f1a029a316f6d28de28f": {
+    "url": "https://store.steampowered.com/app/2531310/The_Last_of_Us_Part_II_Remastered/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317963.641,
+    "hits": 1
+  },
+  "1bb83821faa02ed19e0bc2b436f9fefbcfbcc3a8": {
+    "url": "https://store.steampowered.com/app/261550/Mount__Blade_II_Bannerlord/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317964.867,
+    "hits": 1
+  },
+  "90e2041eb1cc5a9fb4bcd1e2c5d9823d2a8ae7f7": {
+    "url": "https://store.steampowered.com/app/376210/The_Isle/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317965.992,
+    "hits": 1
+  },
+  "21b9c9ec729ea396d04e27e05114fe304498fa7a": {
+    "url": "https://store.steampowered.com/app/284160/BeamNGdrive/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317967.784,
+    "hits": 1
+  },
+  "814a50e9119f9cf82a33b7f3d6070183c6632854": {
+    "url": "https://store.steampowered.com/app/1295660/Sid_Meiers_Civilization_VII/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317968.975,
+    "hits": 1
+  },
+  "7a2ae447a7256c3a68c50592a7051c77ab198fc8": {
+    "url": "https://store.steampowered.com/app/3841510/DYNASTY_WARRIORS_3_Complete_Edition_Remastered/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317970.601,
+    "hits": 1
+  },
+  "6691499155f405ec566f5611359546a6c89e6c82": {
+    "url": "https://store.steampowered.com/app/3527290/PEAK/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317972.334,
+    "hits": 1
+  },
+  "6f4f50bbece76e94efe389f9f64f7c384308971b": {
+    "url": "https://store.steampowered.com/app/1669000/Age_of_Wonders_4/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317973.659,
+    "hits": 1
+  },
+  "652e0ca89faa2b87baf95e37a4588ff7dfc482a1": {
+    "url": "https://store.steampowered.com/app/4656000/BOMBANANA/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317975.453,
+    "hits": 1
+  },
+  "0edc57b86c9eff5b7fb087fbdff248cf037b7a61": {
+    "url": "https://store.steampowered.com/app/1903340/Clair_Obscur_Expedition_33/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317976.517,
+    "hits": 1
+  },
+  "98a72775211242c0be7bc9c455bda73c6737a873": {
+    "url": "https://store.steampowered.com/app/2221490/Tom_Clancys_The_Division_2/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317978.15,
+    "hits": 1
+  },
+  "a93d3233106c5d92db058a8833d12d03abd50513": {
+    "url": "https://store.steampowered.com/app/990080/Hogwarts_Legacy/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317979.513,
+    "hits": 1
+  },
+  "e834c1245d04972ff0c1eb96428a05153c9900c7": {
+    "url": "https://store.steampowered.com/app/1057090/Ori_and_the_Will_of_the_Wisps/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317981.141,
+    "hits": 1
+  },
+  "ef5205b7ba8bfe9f633db24c5bd2dfc74faefad5": {
+    "url": "https://store.steampowered.com/app/2186680/Warhammer_40000_Rogue_Trader/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317982.826,
+    "hits": 1
+  },
+  "4432ba30b46f86d43f5b2f9648e2c185bbdcf4b4": {
+    "url": "https://store.steampowered.com/app/2300320/Farming_Simulator_25/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317984.756,
+    "hits": 1
+  },
+  "25e7b33d6dedcdf999094669e76024df38c0f6fb": {
+    "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317986.545,
+    "hits": 1
+  },
+  "df37306bf30812059ad9bdf3c48dfea857c17dc5": {
+    "url": "https://store.steampowered.com/app/3564740/Where_Winds_Meet/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317987.787,
+    "hits": 1
+  },
+  "4a2037cb614fec1a8c696b80a33ef19414226d09": {
+    "url": "https://store.steampowered.com/app/3008130/Dying_Light_The_Beast/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317989.754,
+    "hits": 1
+  },
+  "d9af62544b2d51b3dc5d831bbb21d0237f0739b2": {
+    "url": "https://store.steampowered.com/app/3186540/Destiny_2_Renegades/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317990.885,
+    "hits": 1
+  },
+  "25cff2aeb599a92481194d4a795915b9ec8afc1a": {
+    "url": "https://store.steampowered.com/app/1446780/MONSTER_HUNTER_RISE/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317992.307,
+    "hits": 1
+  },
+  "3b9012d0024c17d832399eeb4411e19fe177ee1d": {
+    "url": "https://store.steampowered.com/app/3722330/Shift_At_Midnight/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317993.274,
+    "hits": 1
+  },
+  "92c529046b343c0e70a1364cd90193960c663225": {
+    "url": "https://store.steampowered.com/app/2694490/Path_of_Exile_2/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317995.165,
+    "hits": 1
+  },
+  "88a98e044b53ac209991ad3e2d41f38d6806cc40": {
+    "url": "https://store.steampowered.com/app/2950790/IRON_NEST_Heavy_Turret_Simulator/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317996.27,
+    "hits": 1
+  },
+  "53952aeea7656cc6075ad3947b164d7a131fd6cd": {
+    "url": "https://store.steampowered.com/app/3489700/Stellar_Blade/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317997.456,
+    "hits": 1
+  },
+  "c311c534b08ee7e2a92373d714a9547310343ade": {
+    "url": "https://store.steampowered.com/app/250900/The_Binding_of_Isaac_Rebirth/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791317999.09,
+    "hits": 1
+  },
+  "e2a1fb7f77e1719166d1d141d9408ad0488614b5": {
+    "url": "https://store.steampowered.com/app/594650/Hunt_Showdown_1896/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791318001.077,
+    "hits": 1
+  },
+  "fd6ddeec6ec503065cdf5fc0cf1216e4dcd76953": {
+    "url": "https://store.steampowered.com/app/2073620/Arena_Breakout_Infinite/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791318002.02,
+    "hits": 1
+  },
+  "d5e565de67dcfc5ca46e6b09ddd23b7bd17209c9": {
+    "url": "https://store.steampowered.com/app/1659040/HITMAN_World_of_Assassination/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791318004.002,
+    "hits": 1
+  },
+  "c97cee791e7f11ec35e1ffc6ce2fb2b1f4e71692": {
+    "url": "https://store.steampowered.com/app/1364780/Street_Fighter_6/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791318005.578,
+    "hits": 1
+  },
+  "9de9b62de450dadfe4817ec4a989787cf7241dc7": {
+    "url": "https://store.steampowered.com/app/2138720/REMATCH/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791318007.055,
+    "hits": 1
+  },
+  "15bb99f704ba1818d50f88c4b7dfd4833815f794": {
+    "url": "https://store.steampowered.com/app/3124540/Far_Far_West/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791318008.637,
+    "hits": 1
+  },
+  "015afe8ba9081b13e6206f876a14ff0b51dec495": {
+    "url": "https://store.steampowered.com/app/2909400/FINAL_FANTASY_VII_REBIRTH/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791318010.215,
+    "hits": 1
+  },
+  "0a6adf4c60b9e50e05110b091c6d18fe06de4ed2": {
+    "url": "https://store.steampowered.com/app/739630/Phasmophobia/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791318011.188,
+    "hits": 1
+  },
+  "a071cf22b96e040f41456009e2e7dc8222a3b537": {
+    "url": "https://store.steampowered.com/app/4025700/Heartopia/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791318012.824,
+    "hits": 1
+  },
+  "10a35d5384dd5b330fc0d8dedf8395f107a3ec91": {
+    "url": "https://store.steampowered.com/app/4705510/Happy_Wheels/?snr=1_7_7_230_150_2",
+    "status": 200,
+    "last_seen": 1791318014.673,
+    "hits": 1
   }
 }

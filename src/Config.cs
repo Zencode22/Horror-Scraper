@@ -36,12 +36,13 @@ public sealed record ItchScraperConfig
         "https://itch.io/games/newest/tag-horror",
     };
 
-    /// <summary>Steam Store search pages crawled for the horror genre. The
-    /// 'category_2' tag id is Steam's Horror genre filter; results come back
-    /// newest-first so the crawl always sees fresh releases.</summary>
+    /// <summary>Steam Store search pages crawled for the horror genre.
+    /// `genre=Horror` is Steam's reliable horror filter on the modern search
+    /// endpoint; `sortBy=Released` returns newest-first so the crawl always
+    /// sees fresh releases. `count=75` maximises results per page.</summary>
     public IReadOnlyList<string> SteamSourceUrls { get; init; } = new[]
     {
-        "https://store.steampowered.com/search/?category_2=21&sortBy=Desc&count=75",
+        "https://store.steampowered.com/search/?genre=Horror&sortBy=Released&count=75",
     };
 
     // ------------------------------------------------------------------ //

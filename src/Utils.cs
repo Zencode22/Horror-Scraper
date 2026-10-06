@@ -55,13 +55,14 @@ public static class Utils
     }
 
     /// <summary>
-    /// Turn a raw itch.io price label into a US-dollar amount.
+    /// Turn a raw price label into a US-dollar amount.
     ///
-    /// Handled shapes (all observed on itch.io/games/tag-horror):
+    /// Handled shapes:
     ///   "$7.99"                        -> 7.99
     ///   "$0 -100%" (on sale)           -> 0.0
     ///   "Pay $1 or more for this game" -> 1.0 (name-your-price minimum)
-    ///   "" / null / "Free"             -> 0.0 (no tag == free on itch.io)
+    ///   "" / null                      -> 0.0 (no tag == free on itch.io)
+    ///   "Free", "Free To Play"         -> 0.0 (Steam's free-to-play wording)
     ///   "$--" / garbage                -> null (dropped by the validator)
     /// </summary>
     public static double? NormalizePrice(object? value)
@@ -69,12 +70,17 @@ public static class Utils
         var text = CleanText(value);
         if (text.Length == 0)
         {
-            // itch.io omits the price tag entirely for free games.
+            // itch.io omits the price tag entirely for free games; Steam's
+            // free-to-play rows also arrive with an empty price here.
             return 0.0;
         }
 
         var lowered = text.ToLowerInvariant();
         if (lowered.Contains("--", StringComparison.Ordinal)) return null;
+
+        // Steam's free-to-play rows read "Free To Play" with no numeric part;
+        // treat them as $0 so the row survives validation.
+        if (lowered.Contains("free", StringComparison.Ordinal)) return 0.0;
 
         var match = PriceRegex.Match(lowered.Replace(',', '.'));
         if (!match.Success) return null;

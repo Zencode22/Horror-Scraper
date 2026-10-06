@@ -3,7 +3,7 @@
 // Mirrors the README box "Steam Parser (title, price, release date, developer,
 // reviews)". Two entry points:
 //
-//   ParseSearchPage  store.steampowered.com/search/?category_2=21 (horror)
+//   ParseSearchPage  store.steampowered.com/search/?genre=Horror (horror)
 //                    -> one raw record per result row
 //   ParseAppPage     a /app/<id>/<slug>/ store page
 //                    -> release date, developers, review summary
@@ -49,23 +49,40 @@ public static class SteamParser
     /// <param name="html">Body of a store.steampowered.com/search/ page.</param>
     /// <param name="sourceUrl">The search URL that produced this page.</param>
     /// <param name="page">1-based page counter used only for provenance logging.</param>
+    /// <remarks>
+    /// Steam has shipped two search-result layouts over the years:
+    ///   * modern:  &lt;a class="search_result_row" href=".../app/ID/..."&gt;
+    ///   * legacy:  &lt;div class="search_results_row"&gt;...&lt;a class="search_result_title"&gt;
+    /// This parser accepts both so a markup change on Steam's side does not
+    /// silently zero out the Steam sheet.
+    /// </remarks>
     public static List<Record> ParseSearchPage(string html, string sourceUrl, int page = 1)
     {
         var document = PoliteFetcher.Parse(html);
-        var rows = document.QuerySelectorAll("div.search_results_row").Where(IsGameRow);
-        var results = new List<Record>();
 
+        var rows = document.QuerySelectorAll(
+            "a.search_result_row, div.search_results_row, div.search_result_row");
+
+        var results = new List<Record>();
         foreach (var row in rows)
         {
-            var anchor = row.QuerySelector("a.search_result_title[href*='/app/']")
-                        ?? row.QuerySelector("a[href*='/app/']");
+            if (!IsGameRow(row)) continue;
+
+            // The row may itself be the <a>, or contain one.
+            IElement? anchor = row.LocalName == "a"
+                ? row
+                : row.QuerySelector("a.search_result_row, a.search_result_title, a[href*='/app/']");
             var href = anchor?.GetAttribute("href");
             if (anchor is null || href is null) continue;
+            if (!href.Contains("/app/", StringComparison.Ordinal)) continue;
 
-            var url = PoliteFetcher.Absolute(href, "https://store.steampowered.com/");
-            var title = Utils.CleanText(anchor.TextContent);
+            // Title: modern markup wraps it in <span class="title">; legacy
+            // uses the anchor text directly.
+            var titleEl = row.QuerySelector("span.title") ?? anchor;
+            var title = Utils.CleanText(titleEl.TextContent);
             if (title.Length == 0) continue;
 
+            var url = PoliteFetcher.Absolute(href, "https://store.steampowered.com/");
             var record = new Record
             {
                 ["platform"] = "steam",
@@ -80,10 +97,11 @@ public static class SteamParser
             }
 
             // Price: discounted rows show original + final spans; normal rows a
-            // single price span; "Free To Play" rows have none (normalized to 0).
+            // single price span; "Free To Play" rows have none (normalized to 0
+            // by the pipeline after this method returns).
             var finalPrice = row.QuerySelector(".discount_final_price")?.TextContent;
             var originalPrice = row.QuerySelector(".discount_original_price")?.TextContent;
-            var plainPrice = row.QuerySelector(".search_result_price")?.TextContent;
+            var plainPrice = row.QuerySelector(".search_price, .search_result_price")?.TextContent;
             var priceText = Utils.FirstNonEmpty(finalPrice, originalPrice, plainPrice);
             if (priceText is not null)
             {
@@ -96,7 +114,9 @@ public static class SteamParser
             }
 
             // Release date column: "Oct 6, 2026" or "Coming soon".
-            var dateText = Utils.CleanText(row.QuerySelector(".search_release")?.TextContent);
+            // Modern markup uses `.search_released`; legacy used `.search_release`.
+            var dateText = Utils.CleanText(
+                row.QuerySelector(".search_released, .search_release")?.TextContent);
             if (dateText.Length > 0)
             {
                 record["release_date_raw"] = dateText;
@@ -113,8 +133,10 @@ public static class SteamParser
     private static bool IsGameRow(IElement row)
     {
         if (row.ClassList.Contains("search_result_special_event")) return false;
-        var kind = Utils.CleanText(row.QuerySelector(".search_result_type")?.TextContent).ToLowerInvariant();
-        return kind is not ("dlc" or "bundle" or "special event" or "season");
+        var kind = Utils.CleanText(row.QuerySelector(".search_result_type")?.TextContent)
+            .ToLowerInvariant();
+        // Empty kind = ordinary game row; skip the known non-game kinds.
+        return kind is not ("dlc" or "bundle" or "special event" or "season" or "software");
     }
 
     /// <summary>Turn a Steam search-row date label into ISO, or null ("Coming soon").</summary>
