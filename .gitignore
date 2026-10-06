@@ -1,8 +1,1 @@
-# .NET build artifacts
-bin/
-obj/
-
-# IDE files
-.vs/
-*.user
-*.suo
+(empty)

@@ -1,11 +1,12 @@
-// On-disk response cache for the itch.io fetcher.
+// On-disk response cache shared by every fetcher in the program.
 //
 // README, "Scraping Etiquette": *cache raw responses locally so re-runs don't
 // re-hit servers*. This module implements exactly that with a tiny
-// content-addressed store:
+// content-addressed store, partitioned per host via <see cref="Scope"/> so
+// Steam and itch.io entries live side by side without ever colliding:
 //
-//   cache/itch/<sha1(url)>.json   {"url", "saved_at", "status", "text"}
-//   cache/itch/index.json         {sha1 -> {"url", "hits", "last_seen"}}
+//   cache/<scope>/<sha1(url)>.json   {"url", "saved_at", "status", "text"}
+//   cache/<scope>/index.json         {sha1 -> {"url", "hits", "last_seen"}}
 //
 // The cache is deliberately dumb (no SQLite, no compression): HTML pages are a
 // few hundred KB and a handful of files is easy to inspect by hand while
@@ -38,7 +39,8 @@ public sealed class ResponseCache
 {
     private static readonly JsonSerializerOptions Indented = new() { WriteIndented = true };
 
-    private readonly string _indexPath;
+    /// <summary>Active partition (host name); set by the fetcher before each call.</summary>
+    public string Scope { get; set; } = "default";
 
     public string CacheDir { get; }
     public double Ttl { get; set; }
@@ -56,8 +58,11 @@ public sealed class ResponseCache
         CacheDir = cacheDir;
         Ttl = ttl;
         Enabled = enabled;
-        _indexPath = Path.Combine(CacheDir, "index.json");
     }
+
+    private string RootFor(string scope) => Path.Combine(CacheDir, scope);
+
+    private string IndexPathFor(string scope) => Path.Combine(RootFor(scope), "index.json");
 
     // ------------------------------------------------------------------ //
     // plumbing                                                           //
@@ -68,15 +73,15 @@ public sealed class ResponseCache
         return Convert.ToHexString(hash).ToLowerInvariant();
     }
 
-    private string PathFor(string url) => Path.Combine(CacheDir, $"{CacheKey(url)}.json");
+    private string PathFor(string url) => Path.Combine(RootFor(Scope), $"{CacheKey(url)}.json");
 
-    private void EnsureDir() => Directory.CreateDirectory(CacheDir);
+    private void EnsureDir() => Directory.CreateDirectory(RootFor(Scope));
 
     private JsonObject LoadIndex()
     {
         try
         {
-            return JsonNode.Parse(File.ReadAllText(_indexPath)) as JsonObject ?? new JsonObject();
+            return JsonNode.Parse(File.ReadAllText(IndexPathFor(Scope))) as JsonObject ?? new JsonObject();
         }
         catch (Exception e) when (e is IOException or JsonException or UnauthorizedAccessException)
         {
@@ -96,7 +101,7 @@ public sealed class ResponseCache
         try
         {
             EnsureDir();
-            File.WriteAllText(_indexPath, index.ToJsonString(Indented));
+            File.WriteAllText(IndexPathFor(Scope), index.ToJsonString(Indented));
         }
         catch (Exception e) when (e is IOException or UnauthorizedAccessException)
         {
@@ -179,7 +184,7 @@ public sealed class ResponseCache
         return entry;
     }
 
-    /// <summary>Delete stale entries; returns how many files were removed.</summary>
+    /// <summary>Delete stale entries across every scope; returns files removed.</summary>
     public int Purge(double? olderThan = null)
     {
         var cutoff = olderThan ?? Ttl;
@@ -187,9 +192,15 @@ public sealed class ResponseCache
         var removed = 0;
         if (!Directory.Exists(CacheDir)) return removed;
 
-        foreach (var path in Directory.GetFiles(CacheDir, "*.json").OrderBy(p => p))
+        var paths = Directory
+            .GetDirectories(CacheDir)                       // per-scope folders
+            .SelectMany(d => Directory.GetFiles(d, "*.json"))
+            .Concat(Directory.GetFiles(CacheDir, "*.json")) // legacy flat layout
+            .OrderBy(p => p, StringComparer.Ordinal);
+
+        foreach (var path in paths)
         {
-            if (string.Equals(path, _indexPath, StringComparison.Ordinal)) continue;
+            if (Path.GetFileName(path).Equals("index.json", StringComparison.OrdinalIgnoreCase)) continue;
 
             double savedAt;
             try
@@ -219,7 +230,9 @@ public sealed class ResponseCache
     /// <summary>Snapshot of cache utilisation for run summaries.</summary>
     public Dictionary<string, object?> Stats()
     {
-        var total = Directory.Exists(CacheDir) ? Directory.GetFiles(CacheDir, "*.json").Length : 0;
+        var total = Directory.Exists(CacheDir)
+            ? Directory.GetFiles(CacheDir, "*.json", SearchOption.AllDirectories).Length
+            : 0;
         return new Dictionary<string, object?>
         {
             ["dir"] = CacheDir,

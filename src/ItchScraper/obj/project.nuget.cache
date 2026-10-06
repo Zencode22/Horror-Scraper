@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "dgSpecHash": "svzEQxFN9i8=",
+  "success": true,
+  "projectFilePath": "/workspace/src/ItchScraper/ItchScraper.csproj",
+  "expectedPackageFiles": [
+    "/root/.nuget/packages/anglesharp/1.1.2/anglesharp.1.1.2.nupkg.sha512",
+    "/root/.nuget/packages/closedxml/0.104.2/closedxml.0.104.2.nupkg.sha512",
+    "/root/.nuget/packages/closedxml.parser/1.2.0/closedxml.parser.1.2.0.nupkg.sha512",
+    "/root/.nuget/packages/documentformat.openxml/3.1.1/documentformat.openxml.3.1.1.nupkg.sha512",
+    "/root/.nuget/packages/documentformat.openxml.framework/3.1.1/documentformat.openxml.framework.3.1.1.nupkg.sha512",
+    "/root/.nuget/packages/excelnumberformat/1.1.0/excelnumberformat.1.1.0.nupkg.sha512",
+    "/root/.nuget/packages/rbush/4.0.0/rbush.4.0.0.nupkg.sha512",
+    "/root/.nuget/packages/sixlabors.fonts/1.0.0/sixlabors.fonts.1.0.0.nupkg.sha512",
+    "/root/.nuget/packages/system.io.packaging/8.0.1/system.io.packaging.8.0.1.nupkg.sha512",
+    "/root/.nuget/packages/system.text.encoding.codepages/8.0.0/system.text.encoding.codepages.8.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AngleSharp' 1.1.2 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-pgww-w46g-26qg",
+      "libraryId": "AngleSharp",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

@@ -24,11 +24,15 @@ public sealed class GameTable
         "title", "platform", "price_usd", "release_date", "developer", "reviews_positive",
     };
 
-    /// <summary>Extra columns that are useful for itch rows (kept after the base schema).</summary>
+    /// <summary>Extra columns that are useful per source (kept after the base
+    /// schema; only the ones actually present in a table get materialized).</summary>
     public static readonly string[] ExtraColumns =
     {
+        // shared + itch-specific
         "url", "game_id", "updated_at", "rating_count", "rating_value", "genre", "tags",
         "status", "platforms", "short_description", "source_url", "page",
+        // steam-specific
+        "reviews_total", "review_percent", "review_sentiment", "price_original_raw",
     };
 
     public List<string> Columns { get; }
@@ -132,14 +136,22 @@ public static class Cleaning
             var release = row.Get("release_date") ?? row.Get("release_date_raw");
             var updated = row.Get("updated_at") ?? row.Get("updated_at_raw");
 
+            var platform = Utils.CleanText(row.Get("platform")).ToLowerInvariant();
+            if (platform.Length == 0) platform = "itch";
+
             row["title"] = Utils.CleanText(row.Get("title") ?? row.Get("detail_title"));
             row["developer"] = Utils.CleanText(row.Get("developer"));
-            row["platform"] = "itch";
-            row["price_usd"] = PriceOrNan(row.Get("price_usd") ?? row.Get("price_raw"));
+            row["platform"] = platform;
+            row["price_usd"] = PriceOrNan(row.Get("price_usd") ?? row.Get("price_raw"), platform);
             row["release_date"] = Utils.ToIsoDate(release);
             row["updated_at"] = Utils.ToIsoDate(updated);
-            row["reviews_positive"] = null;
+            row["reviews_positive"] = ReviewsPositive(row);
             row["genre"] = Utils.CleanText(row.Get("genre") ?? FirstOfList(row.Get("genres")));
+            if (platform == "steam")
+            {
+                // Keep the full tag list too - Steam app pages expose several genres.
+                row["tags"] = JoinList(row.Get("genres"));
+            }
             row["tags"] = JoinList(row.Get("tags"));
             row["platforms"] = JoinList(row.Get("platforms"));
             row["status"] = Utils.CleanText(row.Get("status"));
@@ -148,6 +160,19 @@ public static class Cleaning
         }
         return normalized;
     }
+
+    /// <summary>Coerce the review field: itch rows have none, Steam rows carry a
+    /// computed positive-review count from the app page.</summary>
+    private static long? ReviewsPositive(Record row) => row.Get("reviews_positive") switch
+    {
+        long l => l,
+        int i => i,
+        double d when !double.IsNaN(d) => (long)Math.Round(d),
+        string text when long.TryParse(new string(text.Where(char.IsDigit).ToArray()),
+                                       System.Globalization.NumberStyles.Integer,
+                                       CultureInfo.InvariantCulture, out var parsed) => parsed,
+        _ => null,
+    };
 
     private static string? FirstOfList(object? value) =>
         value is IReadOnlyList<string> list && list.Count > 0 ? list[0] : null;
@@ -158,12 +183,15 @@ public static class Cleaning
         _ => Utils.CleanText(value),
     };
 
-    /// <summary>Return a double price, or NaN when nothing usable is available.</summary>
-    private static double PriceOrNan(object? value)
+    /// <summary>Return a double price, or NaN when nothing usable is available.
+    /// A *missing* price means "Free" on itch.io but "unknown" on Steam (where
+    /// the validator decides whether to keep the row).</summary>
+    private static double PriceOrNan(object? value, string platform = "itch")
     {
         double? parsed = value switch
         {
-            null => null,
+            null => platform == "itch" ? 0.0 : null,
+            string s when s.Length == 0 => platform == "itch" ? 0.0 : null,
             double d => double.IsNaN(d) ? null : d,
             long l => (double)l,
             int i => i,
@@ -263,7 +291,7 @@ public static class Cleaning
     public static GameTable CleanTable(IEnumerable<Record> records, RunStats? stats = null)
     {
         var raw = records.ToList();
-        var cleaned = ValidateRows(Deduplicate(NormalizeRows(raw)));
+        var cleaned = CrossPlatformDedupe(ValidateRows(Deduplicate(NormalizeRows(raw))));
         var result = RecordsToTable(cleaned);
 
         foreach (var column in GameTable.BaseColumns)
@@ -279,6 +307,32 @@ public static class Cleaning
                        $"({total} unique after dedupe pass), {dated}/{Math.Max(total, 1)} carry a release date");
         }
         return result;
+    }
+
+    /// <summary>Drop cross-source duplicates: the same title+developer scraped
+    /// from both stores. The Steam row wins because it carries richer review and
+    /// release-date data; ties keep whichever was seen first.</summary>
+    public static List<Record> CrossPlatformDedupe(IEnumerable<Record> records)
+    {
+        var byKey = new Dictionary<(string, string), Record>();
+        var order = new List<(string, string)>();
+        foreach (var row in records)
+        {
+            var key = (Utils.NormalizeTitle(row.Get("title")), Utils.NormalizeTitle(row.Get("developer")));
+            if (!byKey.TryGetValue(key, out var existing))
+            {
+                order.Add(key);
+                byKey[key] = row;
+                continue;
+            }
+            var existingPlatform = Utils.CleanText(existing.Get("platform")).ToLowerInvariant();
+            var candidatePlatform = Utils.CleanText(row.Get("platform")).ToLowerInvariant();
+            if (existingPlatform != candidatePlatform && candidatePlatform == "steam")
+            {
+                byKey[key] = row; // steam beats itch for the combined view
+            }
+        }
+        return order.Select(k => byKey[k]).ToList();
     }
 
     internal static string FormatDouble(double value) =>
