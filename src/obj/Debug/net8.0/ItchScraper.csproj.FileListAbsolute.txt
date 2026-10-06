@@ -23,3 +23,12 @@
 /workspace/src/ItchScraper/obj/Debug/net8.0/ItchScraper.pdb
 /workspace/src/ItchScraper/obj/Debug/net8.0/ItchScraper.genruntimeconfig.cache
 /workspace/src/ItchScraper/obj/Debug/net8.0/ref/ItchScraper.dll
+C:\Users\conno\Documents\GitHub\Codes\Horror-Scraper\src\obj\Debug\net8.0\ItchScraper.csproj.AssemblyReference.cache
+C:\Users\conno\Documents\GitHub\Codes\Horror-Scraper\src\obj\Debug\net8.0\ItchScraper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\conno\Documents\GitHub\Codes\Horror-Scraper\src\obj\Debug\net8.0\ItchScraper.AssemblyInfoInputs.cache
+C:\Users\conno\Documents\GitHub\Codes\Horror-Scraper\src\obj\Debug\net8.0\ItchScraper.AssemblyInfo.cs
+C:\Users\conno\Documents\GitHub\Codes\Horror-Scraper\src\obj\Debug\net8.0\ItchScraper.csproj.CoreCompileInputs.cache
+C:\Users\conno\Documents\GitHub\Codes\Horror-Scraper\src\obj\Debug\net8.0\ItchScraper.sourcelink.json
+C:\Users\conno\Documents\GitHub\Codes\Horror-Scraper\src\obj\Debug\net8.0\ItchScraper.dll
+C:\Users\conno\Documents\GitHub\Codes\Horror-Scraper\src\obj\Debug\net8.0\refint\ItchScraper.dll
+C:\Users\conno\Documents\GitHub\Codes\Horror-Scraper\src\obj\Debug\net8.0\ItchScraper.pdb

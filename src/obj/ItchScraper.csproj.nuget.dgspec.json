@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/workspace/src/ItchScraper/ItchScraper.csproj": {}
+    "C:\\Users\\conno\\Documents\\GitHub\\Codes\\Horror-Scraper\\src\\ItchScraper.csproj": {}
   },
   "projects": {
-    "/workspace/src/ItchScraper/ItchScraper.csproj": {
+    "C:\\Users\\conno\\Documents\\GitHub\\Codes\\Horror-Scraper\\src\\ItchScraper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspace/src/ItchScraper/ItchScraper.csproj",
+        "projectUniqueName": "C:\\Users\\conno\\Documents\\GitHub\\Codes\\Horror-Scraper\\src\\ItchScraper.csproj",
         "projectName": "ItchScraper",
-        "projectPath": "/workspace/src/ItchScraper/ItchScraper.csproj",
-        "packagesPath": "/root/.nuget/packages/",
-        "outputPath": "/workspace/src/ItchScraper/obj/",
+        "projectPath": "C:\\Users\\conno\\Documents\\GitHub\\Codes\\Horror-Scraper\\src\\ItchScraper.csproj",
+        "packagesPath": "C:\\Users\\conno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\conno\\Documents\\GitHub\\Codes\\Horror-Scraper\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/root/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\conno\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,7 +37,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -63,12 +64,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.23, 8.0.23]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.23, 8.0.23]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.23, 8.0.23]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.23, 8.0.23]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/dotnet/sdk/8.0.425/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
